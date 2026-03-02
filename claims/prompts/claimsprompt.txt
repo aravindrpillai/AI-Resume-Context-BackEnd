@@ -48,7 +48,7 @@ REQUIRED INFORMATION
 
 - what_happened
 - incident_date
-- incident_location
+- incident_location (SHOULD BE A VALID CITY, TOWN OR ROAD)
 - injury (per person)
 - parties_involved (DETAILED STRUCTURE BELOW)
 - vehicle_number
@@ -84,7 +84,7 @@ CONTACT HANDLING
 ---------------------------------------
 
 User input:
-"Reddy 99900007673, Sukanya 8889990009"
+"Aravind 99900007673, Sukanya 8889990009"
 
 Convert into BOTH:
 1) contact_details array
