@@ -1,2 +1,2 @@
-chmod +x deploy.sh
-./deploy.sh
+chmod +x deploy/deploy.sh
+./deploy/deploy.sh

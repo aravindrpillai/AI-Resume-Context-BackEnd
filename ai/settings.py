@@ -25,7 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cv',
-    'claims'
+    'claims',
+    'finance',
+    'chat'
 ]
 
 MIDDLEWARE = [
@@ -76,7 +78,7 @@ POSTGRES = {
 }
 
 DATABASES = {
-    'default': SQLLITE if DEBUG else POSTGRES
+    'default': POSTGRES
 }
 
 

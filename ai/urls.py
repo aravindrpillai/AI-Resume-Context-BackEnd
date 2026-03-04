@@ -3,6 +3,7 @@ from django.contrib import admin
 from cv.views.cv_upload_api import CVUploadAPIView
 from cv.views.cv_search_api import CVSearchAPIView
 from claims.views import ClaimsAPIView, ClaimsFileUploadView
+from finance.views import FinancialAdvisorView, FinancialAdvisorReportGenerator
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -16,6 +17,11 @@ urlpatterns = [
     #Claims
     path("claims/conversation/", ClaimsAPIView.as_view()),
     path("claims/conversation/<uuid:conv_id>/", ClaimsAPIView.as_view()),
-    path("claims/conversation/<uuid:conv_id>/upload/", ClaimsFileUploadView.as_view())
-
+    path("claims/conversation/<uuid:conv_id>/upload/", ClaimsFileUploadView.as_view()),
+    
+     
+    #Finance
+    path("ai/finance/", FinancialAdvisorView.as_view()),
+    path("ai/finance/<uuid:conv_id>/", FinancialAdvisorView.as_view()),
+    path("ai/finance/<uuid:conv_id>/report/", FinancialAdvisorReportGenerator.as_view()),
 ]
