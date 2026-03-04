@@ -15,6 +15,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080", "http://127.0.0.1:8080"
 ]
 
+CORS_ALLOW_METHODS = [
+    "DELETE", "GET", "OPTIONS", "PATCH", "POST", "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept", "authorization", "content-type", "origin", "x-requested-with",
+]
+
 
 INSTALLED_APPS = [
     'corsheaders',
@@ -31,8 +39,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
