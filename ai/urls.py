@@ -28,6 +28,6 @@ urlpatterns = [
     path("ai/finance/<uuid:conv_id>/report/", FinancialAdvisorReportGenerator.as_view()),
     
     
-    path("ai/files/filehandler", FileAPIView.as_view()),
+    path("ai/files/filehandler/", FileAPIView.as_view()),
     path('ai/files/chat/', ChatAPIView.as_view()),
 ]
